@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "PropReel - India's Free Real Estate Discovery & Vertical Reels Platform",
   "scripts": {
-    "build": "tsc -p tsconfig.json",
-    "start": "node dist/server.js",
+    "build": "node build.js",
+    "start": "node backend/dist/server.js",
     "dev": "ts-node-dev --respawn --transpile-only backend/src/server.ts"
   },
   "dependencies": {
