@@ -1,0 +1,6 @@
+{
+  "name": "PropReel",
+  "description": "India's Free Real Estate Discovery & Reels Platform. Discover properties via vertical reels, connect with verified owners and brokers, and manage leads.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

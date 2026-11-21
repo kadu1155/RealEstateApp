@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PropReel — India's Free Real Estate Discovery & Vertical Reels Platform</title>
+  <meta name="description" content="Discover Pune properties through vertical video reels. MahaRERA verified listings in Baner, Wakad, Hinjawadi, Kharadi, Kothrud with direct WhatsApp connect.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              emerald: '#10B981',
+              orange: '#F97316',
+              amber: '#F59E0B',
+              rera: '#2563EB',
+              whatsapp: '#25D366',
+              dark: '#0F172A',
+              card: '#1E293B',
+              border: '#334155'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0b0f19; color: #f8fafc; }
+    .sunset-gradient { background: linear-gradient(135deg, #10B981 0%, #F59E0B 50%, #F97316 100%); }
+    .sunset-text { background: linear-gradient(135deg, #34D399 0%, #FBBF24 50%, #FB923C 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+    .phone-mockup {
+      width: 310px;
+      height: 590px;
+      border-radius: 42px;
+      border: 8px solid #334155;
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.7), 0 0 40px rgba(16, 185, 129, 0.2);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-emerald-500 selection:text-white">
+
+  <!-- Top Announcement Bar -->
+  <aside aria-label="Announcement" class="bg-gradient-to-r from-emerald-600 via-amber-600 to-orange-600 text-xs font-semibold py-2 px-4 text-center text-white flex items-center justify-center gap-2">
+    <span>✨ Pune Launch: MahaRERA-verified residential reels in Baner, Wakad, Hinjawadi & Kharadi!</span>
+    <a href="#download" class="underline hover:text-emerald-100 font-bold ml-1">Get Android App &rarr;</a>
+  </aside>
+
+  <!-- Navigation Bar -->
+  <header class="sticky top-0 z-50 glass">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-11 h-11 rounded-2xl sunset-gradient flex items-center justify-center shadow-lg shadow-emerald-500/20">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+          </svg>
+        </div>
+        <div>
+          <span class="text-2xl font-black tracking-tight text-white flex items-center gap-1.5">
+            PropReel<span class="text-xs px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 font-bold border border-emerald-500/30">PUNE</span>
+          </span>
+          <p class="text-[11px] text-slate-400 leading-none">Vertical Video Real Estate</p>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#properties" class="hover:text-emerald-400 transition-colors">Properties</a>
+        <a href="#reels" class="hover:text-emerald-400 transition-colors">Video Reels</a>
+        <a href="#localities" class="hover:text-emerald-400 transition-colors">Pune Localities</a>
+        <a href="#api" class="hover:text-emerald-400 transition-colors">API Status</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="#download" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-white shadow-lg shadow-emerald-500/25 transition-all transform hover:-translate-y-0.5">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/>
+          </svg>
+          Download APK
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-12 pb-20 overflow-hidden">
+    <!-- Glow effects -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/3 right-10 w-[400px] h-[400px] bg-orange-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Text & Search -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-800/80 border border-slate-700 text-xs font-semibold text-slate-300">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            100% Free • Verified Owners • Zero Spam • MahaRERA Certified
+          </div>
+
+          <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight">
+            Discover Homes in Pune Through <span class="sunset-text">Vertical Video Reels</span>
+          </h1>
+
+          <p class="text-lg text-slate-400 max-w-2xl leading-relaxed">
+            Stop scrolling flat, outdated photos. Experience immersive 9:16 video tours of verified flats, luxury penthouses, and rental apartments across Baner, Wakad, Hinjawadi, and Kharadi.
+          </p>
+
+          <!-- Quick Search Bar -->
+          <div class="p-4 rounded-2xl glass space-y-3">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div>
+                <label class="block text-xs font-bold text-slate-400 mb-1">LOCALITY</label>
+                <select id="searchLocality" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-sm font-semibold text-white focus:outline-none focus:border-emerald-500">
+                  <option value="">All Pune Localities</option>
+                  <option value="Baner" selected>Baner</option>
+                  <option value="Wakad">Wakad</option>
+                  <option value="Kharadi">Kharadi</option>
+                  <option value="Hinjawadi">Hinjawadi</option>
+                  <option value="Kothrud">Kothrud</option>
+                  <option value="Kalyani Nagar">Kalyani Nagar</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-slate-400 mb-1">BHK CONFIG</label>
+                <select id="searchBhk" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-sm font-semibold text-white focus:outline-none focus:border-emerald-500">
+                  <option value="">Any BHK</option>
+                  <option value="1">1 BHK</option>
+                  <option value="2">2 BHK</option>
+                  <option value="3" selected>3 BHK</option>
+                  <option value="4">4+ BHK</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-slate-400 mb-1">PROPERTY TYPE</label>
+                <select id="searchType" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-sm font-semibold text-white focus:outline-none focus:border-emerald-500">
+                  <option value="BUY">Buy (Resale / New)</option>
+                  <option value="RENT">Rent / Lease</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between pt-2 border-t border-slate-800">
+              <span class="text-xs text-slate-400">✨ Pre-seeded with Pune verified developer listings</span>
+              <button onclick="applyFilters()" class="px-6 py-2.5 rounded-xl font-bold text-sm bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-400 hover:to-amber-400 text-white shadow-md transition-all">
+                Search Properties
+              </button>
+            </div>
+          </div>
+
+          <!-- Feature Badges -->
+          <div class="grid grid-cols-3 gap-4 pt-2">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center font-bold">
+                ✓
+              </div>
+              <div>
+                <h4 class="text-xs font-bold text-white">MahaRERA Verified</h4>
+                <p class="text-[11px] text-slate-400">Direct registration check</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold">
+                WA
+              </div>
+              <div>
+                <h4 class="text-xs font-bold text-white">1-Tap WhatsApp</h4>
+                <p class="text-[11px] text-slate-400">Direct seller chat</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold">
+                0%
+              </div>
+              <div>
+                <h4 class="text-xs font-bold text-white">Free Owner Posts</h4>
+                <p class="text-[11px] text-slate-400">2 free listings for owners</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Interactive Mobile Reel Phone Simulator -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="phone-mockup relative overflow-hidden bg-black flex flex-col justify-between">
+            
+            <!-- Video Background / Reel Player -->
+            <video id="heroReelVideo" class="absolute inset-0 w-full h-full object-cover" autoplay loop muted playsinline poster="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1000&q=80">
+              <source src="/assets/aistudio/Ready_Possession_4_BHK_Pune__BANER____2000_SQFT_Flat__Enquiry_-_9119487956_-_Pune_vastu__720p__h264__83800051.mp4" type="video/mp4">
+              <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+            </video>
+
+            <!-- Video Dark Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/90 pointer-events-none"></div>
+
+            <!-- Phone Top Status Bar -->
+            <div class="relative z-10 px-6 pt-3 flex items-center justify-between text-white text-xs font-semibold">
+              <span>9:41</span>
+              <div class="w-20 h-4 bg-slate-800 rounded-full"></div>
+              <div class="flex items-center gap-1.5">
+                <button onclick="toggleMute()" id="muteBtn" class="p-1 rounded-full bg-black/40 text-[10px] px-2 text-white border border-white/20">
+                  🔊 Sound
+                </button>
+              </div>
+            </div>
+
+            <!-- Side Floating Actions (TikTok/Reels Style) -->
+            <div class="relative z-10 self-end px-4 flex flex-col items-center gap-4 mb-2">
+              <div class="flex flex-col items-center gap-1">
+                <button class="w-10 h-10 rounded-full bg-black/50 backdrop-blur-md text-red-500 border border-white/10 flex items-center justify-center text-lg shadow-lg hover:scale-110 transition-transform">
+                  ❤️
+                </button>
+                <span class="text-[11px] font-bold text-white shadow-black drop-shadow">428</span>
+              </div>
+              <div class="flex flex-col items-center gap-1">
+                <button class="w-10 h-10 rounded-full bg-black/50 backdrop-blur-md text-amber-400 border border-white/10 flex items-center justify-center text-lg shadow-lg hover:scale-110 transition-transform">
+                  🔖
+                </button>
+                <span class="text-[11px] font-bold text-white shadow-black drop-shadow">112</span>
+              </div>
+              <div class="flex flex-col items-center gap-1">
+                <button class="w-10 h-10 rounded-full bg-black/50 backdrop-blur-md text-emerald-400 border border-white/10 flex items-center justify-center text-lg shadow-lg hover:scale-110 transition-transform">
+                  ↗
+                </button>
+                <span class="text-[11px] font-bold text-white shadow-black drop-shadow">64</span>
+              </div>
+            </div>
+
+            <!-- Bottom Property Overlay Card inside Phone -->
+            <div class="relative z-10 p-4 space-y-2.5">
+              <div class="flex items-center gap-2">
+                <span class="text-xs px-2 py-0.5 rounded-md bg-blue-600 text-white font-bold flex items-center gap-1">
+                  🛡️ MahaRERA: P52100029892
+                </span>
+                <span class="text-xs px-2 py-0.5 rounded-md bg-emerald-600/90 text-white font-bold">
+                  Baner, Pune
+                </span>
+              </div>
+
+              <div>
+                <h3 class="text-base font-extrabold text-white leading-tight drop-shadow">
+                  VTP Earth One — Luxury 3 BHK
+                </h3>
+                <p class="text-xl font-black text-amber-400 drop-shadow">
+                  ₹1.45 Cr <span class="text-xs font-normal text-slate-300">1,150 sq.ft. carpet</span>
+                </p>
+              </div>
+
+              <!-- Seller & Action -->
+              <div class="flex items-center justify-between pt-1">
+                <div class="flex items-center gap-2">
+                  <div class="w-7 h-7 rounded-full bg-emerald-500 flex items-center justify-center text-white text-xs font-bold">VD</div>
+                  <div class="text-left">
+                    <p class="text-[11px] font-bold text-white leading-none">Vikram Deshmukh</p>
+                    <p class="text-[9px] text-emerald-400 leading-none">RERA Verified Broker</p>
+                  </div>
+                </div>
+
+                <a href="https://wa.me/919823045678?text=Hi%20Vikram,%20I%20saw%20VTP%20Earth%20One%20on%20PropReel%20and%20want%20to%20schedule%20a%20site%20visit" target="_blank" class="px-3 py-1.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-white text-xs font-bold flex items-center gap-1 shadow-lg shadow-emerald-500/30">
+                  <span>Chat WhatsApp</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Pune Micro-Markets Localities Bar -->
+  <section id="localities" class="py-8 border-y border-slate-800 bg-slate-900/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-xs font-bold tracking-wider text-slate-400 uppercase">Featured Pune Micro-Markets</h2>
+        <span class="text-xs text-emerald-400 font-semibold">6 Corridors Active</span>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+        <button onclick="filterByLocality('Baner')" class="locality-btn p-3 rounded-xl glass hover:border-emerald-500 transition-all text-left">
+          <p class="text-xs text-slate-400">West Pune</p>
+          <h3 class="text-sm font-bold text-white">Baner</h3>
+          <p class="text-[11px] text-emerald-400 font-semibold mt-1">₹8,500 - 14,000/sqft</p>
+        </button>
+        <button onclick="filterByLocality('Wakad')" class="locality-btn p-3 rounded-xl glass hover:border-emerald-500 transition-all text-left">
+          <p class="text-xs text-slate-400">PCMC / IT Belt</p>
+          <h3 class="text-sm font-bold text-white">Wakad</h3>
+          <p class="text-[11px] text-emerald-400 font-semibold mt-1">₹7,200 - 10,500/sqft</p>
+        </button>
+        <button onclick="filterByLocality('Hinjawadi')" class="locality-btn p-3 rounded-xl glass hover:border-emerald-500 transition-all text-left">
+          <p class="text-xs text-slate-400">IT Hub Ph 1-3</p>
+          <h3 class="text-sm font-bold text-white">Hinjawadi</h3>
+          <p class="text-[11px] text-emerald-400 font-semibold mt-1">₹5,800 - 8,400/sqft</p>
+        </button>
+        <button onclick="filterByLocality('Kharadi')" class="locality-btn p-3 rounded-xl glass hover:border-emerald-500 transition-all text-left">
+          <p class="text-xs text-slate-400">East Pune / EON</p>
+          <h3 class="text-sm font-bold text-white">Kharadi</h3>
+          <p class="text-[11px] text-emerald-400 font-semibold mt-1">₹8,000 - 13,500/sqft</p>
+        </button>
+        <button onclick="filterByLocality('Kothrud')" class="locality-btn p-3 rounded-xl glass hover:border-emerald-500 transition-all text-left">
+          <p class="text-xs text-slate-400">Prime Central</p>
+          <h3 class="text-sm font-bold text-white">Kothrud</h3>
+          <p class="text-[11px] text-emerald-400 font-semibold mt-1">₹11,000 - 18,000/sqft</p>
+        </button>
+        <button onclick="filterByLocality('Kalyani Nagar')" class="locality-btn p-3 rounded-xl glass hover:border-emerald-500 transition-all text-left">
+          <p class="text-xs text-slate-400">Luxury Corridor</p>
+          <h3 class="text-sm font-bold text-white">Kalyani Nagar</h3>
+          <p class="text-[11px] text-emerald-400 font-semibold mt-1">₹12,500 - 22,000/sqft</p>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Properties Grid Section -->
+  <section id="properties" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
+      <div>
+        <div class="inline-flex items-center gap-2 text-xs font-bold text-emerald-400 uppercase tracking-wider mb-2">
+          <span>●</span> Live Verified Listings
+        </div>
+        <h2 class="text-3xl font-extrabold text-white">Explore Properties in Pune</h2>
+      </div>
+
+      <div class="flex items-center gap-2 flex-wrap">
+        <button onclick="filterByBhk('')" class="bhk-pill px-4 py-1.5 rounded-lg text-xs font-bold bg-emerald-500 text-white">All BHKs</button>
+        <button onclick="filterByBhk(1)" class="bhk-pill px-4 py-1.5 rounded-lg text-xs font-bold bg-slate-800 text-slate-300 hover:bg-slate-700">1 BHK</button>
+        <button onclick="filterByBhk(2)" class="bhk-pill px-4 py-1.5 rounded-lg text-xs font-bold bg-slate-800 text-slate-300 hover:bg-slate-700">2 BHK</button>
+        <button onclick="filterByBhk(3)" class="bhk-pill px-4 py-1.5 rounded-lg text-xs font-bold bg-slate-800 text-slate-300 hover:bg-slate-700">3 BHK</button>
+        <button onclick="filterByBhk(4)" class="bhk-pill px-4 py-1.5 rounded-lg text-xs font-bold bg-slate-800 text-slate-300 hover:bg-slate-700">4+ BHK</button>
+      </div>
+    </div>
+
+    <!-- Properties Grid -->
+    <div id="propertyGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Cards rendered by JS -->
+    </div>
+  </section>
+
+  <!-- Video Reels Showcase Section -->
+  <section id="reels" class="py-16 bg-slate-900/60 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-bold text-orange-400 uppercase tracking-widest">9:16 Video Tours</span>
+        <h2 class="text-3xl font-extrabold text-white mt-2">Watch Real Estate Reels</h2>
+        <p class="text-sm text-slate-400 mt-2">Take a walkthrough before setting foot on site. Verified video reels filmed on location.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Reel 1 -->
+        <div class="rounded-2xl overflow-hidden glass border border-slate-700 group hover:border-emerald-500 transition-all flex flex-col">
+          <div class="relative aspect-[9/14] bg-slate-950 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt="Baner 3 BHK" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+            <div class="absolute top-3 left-3 bg-red-600/90 text-white text-[10px] font-bold px-2 py-0.5 rounded">
+              FEATURED REEL
+            </div>
+            <div class="absolute bottom-3 left-3 right-3 space-y-1">
+              <span class="text-[11px] font-bold text-emerald-400">Baner, Pune</span>
+              <p class="text-sm font-extrabold text-white leading-tight">3 BHK Panoramic Valley Tour</p>
+              <p class="text-xs font-black text-amber-400">₹1.45 Cr</p>
+            </div>
+          </div>
+          <div class="p-3 bg-slate-900/90 flex items-center justify-between text-xs text-slate-400">
+            <span>4.8k views • 428 likes</span>
+            <a href="https://wa.me/919823045678?text=Enquiry%20for%20Baner%203BHK%20Reel" target="_blank" class="text-emerald-400 font-bold hover:underline">Enquire &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Reel 2 -->
+        <div class="rounded-2xl overflow-hidden glass border border-slate-700 group hover:border-emerald-500 transition-all flex flex-col">
+          <div class="relative aspect-[9/14] bg-slate-950 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80" alt="Wakad 2 BHK" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+            <div class="absolute top-3 left-3 bg-emerald-600/90 text-white text-[10px] font-bold px-2 py-0.5 rounded">
+              OWNER VERIFIED
+            </div>
+            <div class="absolute bottom-3 left-3 right-3 space-y-1">
+              <span class="text-[11px] font-bold text-emerald-400">Wakad, Pune</span>
+              <p class="text-sm font-extrabold text-white leading-tight">Pristine Grandeur 2 BHK</p>
+              <p class="text-xs font-black text-amber-400">₹82 Lakh</p>
+            </div>
+          </div>
+          <div class="p-3 bg-slate-900/90 flex items-center justify-between text-xs text-slate-400">
+            <span>2.1k views • 215 likes</span>
+            <a href="https://wa.me/919890123456?text=Enquiry%20for%20Wakad%20Owner%20Reel" target="_blank" class="text-emerald-400 font-bold hover:underline">Enquire &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Reel 3 -->
+        <div class="rounded-2xl overflow-hidden glass border border-slate-700 group hover:border-emerald-500 transition-all flex flex-col">
+          <div class="relative aspect-[9/14] bg-slate-950 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600&q=80" alt="Kharadi Riverside" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+            <div class="absolute top-3 left-3 bg-blue-600/90 text-white text-[10px] font-bold px-2 py-0.5 rounded">
+              BUILDER PARTNER
+            </div>
+            <div class="absolute bottom-3 left-3 right-3 space-y-1">
+              <span class="text-[11px] font-bold text-emerald-400">Kharadi, Pune</span>
+              <p class="text-sm font-extrabold text-white leading-tight">VTP Cygnus Smart 2 BHK</p>
+              <p class="text-xs font-black text-amber-400">₹88 Lakh</p>
+            </div>
+          </div>
+          <div class="p-3 bg-slate-900/90 flex items-center justify-between text-xs text-slate-400">
+            <span>8.9k views • 890 likes</span>
+            <a href="https://wa.me/918000011223?text=Enquiry%20for%20Kharadi%20Reel" target="_blank" class="text-emerald-400 font-bold hover:underline">Enquire &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Reel 4 -->
+        <div class="rounded-2xl overflow-hidden glass border border-slate-700 group hover:border-emerald-500 transition-all flex flex-col">
+          <div class="relative aspect-[9/14] bg-slate-950 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=80" alt="Hinjawadi Rental" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+            <div class="absolute top-3 left-3 bg-purple-600/90 text-white text-[10px] font-bold px-2 py-0.5 rounded">
+              FURNISHED RENT
+            </div>
+            <div class="absolute bottom-3 left-3 right-3 space-y-1">
+              <span class="text-[11px] font-bold text-emerald-400">Hinjawadi Ph 3, Pune</span>
+              <p class="text-sm font-extrabold text-white leading-tight">Megapolis 2 BHK for Techies</p>
+              <p class="text-xs font-black text-amber-400">₹28,000 / mo</p>
+            </div>
+          </div>
+          <div class="p-3 bg-slate-900/90 flex items-center justify-between text-xs text-slate-400">
+            <span>1.6k views • 164 likes</span>
+            <a href="https://wa.me/919823045678?text=Enquiry%20for%20Hinjawadi%20Rental%20Reel" target="_blank" class="text-emerald-400 font-bold hover:underline">Enquire &rarr;</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Download Android APK Section -->
+  <section id="download" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="p-8 sm:p-12 rounded-3xl glass border border-emerald-500/30 relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-900 to-emerald-950/40">
+      <div class="grid lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-8 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-bold border border-emerald-500/20">
+            ANDROID APPLICATION • v1.0 RELEASE
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-black text-white">
+            Get the PropReel Android App
+          </h2>
+          <p class="text-slate-300 text-base max-w-2xl leading-relaxed">
+            Install the native Android app built with Jetpack Compose & Kotlin. Experience ultra-smooth 60fps vertical swipe gestures, full-screen playback, instant offline caching, and broker CRM pipeline.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4 pt-3">
+            <a href="/apk/propreel-app.apk" download="propreel-app.apk" class="inline-flex items-center gap-3 px-8 py-4 rounded-2xl font-black text-base bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-white shadow-xl shadow-emerald-500/30 transform hover:-translate-y-1 transition-all">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/>
+              </svg>
+              <span>Download APK (31 MB)</span>
+            </a>
+
+            <a href="https://github.com/kadu1155/RealEstateApp" target="_blank" class="inline-flex items-center gap-2 px-6 py-4 rounded-2xl font-bold text-sm bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+              View on GitHub
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-4 bg-slate-950/80 p-6 rounded-2xl border border-slate-800 space-y-3 text-xs">
+          <p class="font-bold text-white text-sm">📲 How to Install:</p>
+          <ol class="space-y-2 text-slate-300 list-decimal list-inside">
+            <li>Tap <strong class="text-white">Download APK</strong> on your Android phone.</li>
+            <li>If prompted, allow <em class="text-emerald-400">"Install from unknown sources"</em> in browser settings.</li>
+            <li>Tap the downloaded file in your notification bar and click <strong class="text-white">Install</strong>.</li>
+            <li>Open <strong class="text-white">PropReel</strong> and start discovering Pune properties!</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Backend API & Status Section -->
+  <section id="api" class="py-12 border-t border-slate-800 bg-slate-900/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 p-6 rounded-2xl glass">
+        <div>
+          <div class="flex items-center gap-2 mb-1">
+            <span id="apiStatusDot" class="w-3 h-3 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-400">API Healthcheck</span>
+            <span id="apiLatency" class="text-xs px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono">checking...</span>
+          </div>
+          <h3 class="text-lg font-bold text-white">Live Node.js / Express REST API</h3>
+          <p class="text-xs text-slate-400">Ready to query via mobile client or external integration.</p>
+        </div>
+
+        <div class="flex items-center gap-3 flex-wrap">
+          <a href="/api/health" target="_blank" class="px-4 py-2 rounded-xl text-xs font-mono font-bold bg-slate-800 text-slate-200 hover:bg-slate-700 border border-slate-700">
+            GET /api/health
+          </a>
+          <a href="/api/v1/properties" target="_blank" class="px-4 py-2 rounded-xl text-xs font-mono font-bold bg-slate-800 text-emerald-400 hover:bg-slate-700 border border-slate-700">
+            GET /api/v1/properties
+          </a>
+          <a href="/api/v1/reels/feed" target="_blank" class="px-4 py-2 rounded-xl text-xs font-mono font-bold bg-slate-800 text-orange-400 hover:bg-slate-700 border border-slate-700">
+            GET /api/v1/reels/feed
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="mt-auto py-10 border-t border-slate-800 bg-slate-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+      <div>
+        <p class="font-bold text-slate-400">PropReel Real Estate Platform © 2026</p>
+        <p>Built for Pune, Maharashtra (Baner, Wakad, Hinjawadi, Kharadi, Kothrud)</p>
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="https://github.com/kadu1155/RealEstateApp" class="hover:text-slate-300">GitHub Repository</a>
+        <a href="#properties" class="hover:text-slate-300">Pune Listings</a>
+        <a href="#download" class="hover:text-slate-300">Android APK</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive JavaScript -->
+  <script>
+    const PUNE_PROPERTIES = [
+      {
+        id: "p1",
+        title: "VTP Earth One — Luxury 3 BHK",
+        description: "Panoramic valley view with acoustic sliding glass, modular kitchen, home automation and 2 covered parking slots.",
+        priceDisplay: "₹1.45 Cr",
+        locality: "Baner",
+        bhk: 3,
+        carpetArea: "1,150 sq.ft.",
+        type: "BUY",
+        badge: "RERA_VERIFIED",
+        reraId: "P52100029892",
+        seller: "Vikram Deshmukh (Broker)",
+        phone: "+919823045678",
+        image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80"
+      },
+      {
+        id: "p2",
+        title: "Pristine Grandeur 2 BHK",
+        description: "Direct owner listing. East-facing, dry balcony, piped gas, 5 mins from Phoenix Mall Wakad & Hinjawadi Ph 1.",
+        priceDisplay: "₹82 Lakh",
+        locality: "Wakad",
+        bhk: 2,
+        carpetArea: "780 sq.ft.",
+        type: "BUY",
+        badge: "OWNER_VERIFIED",
+        reraId: null,
+        seller: "Priya Kulkarni (Owner)",
+        phone: "+919890123456",
+        image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80"
+      },
+      {
+        id: "p3",
+        title: "VTP Cygnus Smart 2 BHK",
+        description: "Near EON Free Zone & WTC. Master bedroom AC, smart digital lock, EV charging station & swimming pool.",
+        priceDisplay: "₹88 Lakh",
+        locality: "Kharadi",
+        bhk: 2,
+        carpetArea: "745 sq.ft.",
+        type: "BUY",
+        badge: "RERA_VERIFIED",
+        reraId: "P52100026781",
+        seller: "Vikram Deshmukh (Broker)",
+        phone: "+919823045678",
+        image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80"
+      },
+      {
+        id: "p4",
+        title: "Megapolis Mystic Phase 3",
+        description: "Walking distance to TCS & Tech Mahindra. Excellent rental yield of ~₹18k/month. Ideal starter home.",
+        priceDisplay: "₹42 Lakh",
+        locality: "Hinjawadi",
+        bhk: 1,
+        carpetArea: "460 sq.ft.",
+        type: "BUY",
+        badge: "BUILDER_PARTNER",
+        reraId: "P52100018442",
+        seller: "Godrej Properties Pune",
+        phone: "+918000011223",
+        image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&q=80"
+      },
+      {
+        id: "p5",
+        title: "Panchshil One Kothrud 4 BHK",
+        description: "Ultra-luxury residence with private elevator lobby, Italian marble, servant quarters and clubhouse access.",
+        priceDisplay: "₹3.85 Cr",
+        locality: "Kothrud",
+        bhk: 4,
+        carpetArea: "2,350 sq.ft.",
+        type: "BUY",
+        badge: "RERA_VERIFIED",
+        reraId: "P52100029801",
+        seller: "Apex Prime Realty",
+        phone: "+919823045678",
+        image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80"
+      },
+      {
+        id: "p6",
+        title: "Waterfront Luxury Penthouse",
+        description: "Exclusive penthouse with private terrace jacuzzi, river view, VRV air conditioning and 3 car parkings.",
+        priceDisplay: "₹5.50 Cr",
+        locality: "Kalyani Nagar",
+        bhk: 4,
+        carpetArea: "3,100 sq.ft.",
+        type: "BUY",
+        badge: "RERA_VERIFIED",
+        reraId: "P52100031102",
+        seller: "Vikram Deshmukh (Broker)",
+        phone: "+919823045678",
+        image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80"
+      }
+    ];
+
+    let currentLocality = "";
+    let currentBhk = "";
+
+    function renderProperties() {
+      const container = document.getElementById("propertyGrid");
+      container.innerHTML = "";
+
+      const filtered = PUNE_PROPERTIES.filter(p => {
+        if (currentLocality && !p.locality.toLowerCase().includes(currentLocality.toLowerCase())) return false;
+        if (currentBhk && p.bhk !== parseInt(currentBhk)) return false;
+        return true;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = `<div class="col-span-3 text-center py-12 glass rounded-2xl text-slate-400">No properties matching filters in this locality.</div>`;
+        return;
+      }
+
+      filtered.forEach(p => {
+        const badgeColor = p.badge === 'RERA_VERIFIED' ? 'bg-blue-600 text-white' : (p.badge === 'OWNER_VERIFIED' ? 'bg-emerald-600 text-white' : 'bg-purple-600 text-white');
+        const badgeLabel = p.badge === 'RERA_VERIFIED' ? 'MahaRERA: ' + p.reraId : (p.badge === 'OWNER_VERIFIED' ? 'Direct Owner' : 'Builder Partner');
+
+        const card = document.createElement("div");
+        card.className = "rounded-2xl overflow-hidden glass border border-slate-700 hover:border-emerald-500/50 transition-all flex flex-col group";
+        card.innerHTML = `
+          <div class="relative aspect-video bg-slate-900 overflow-hidden">
+            <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute top-3 left-3 px-2 py-0.5 rounded text-[10px] font-bold ${badgeColor}">
+              ${badgeLabel}
+            </div>
+            <div class="absolute bottom-2 right-2 bg-black/70 backdrop-blur-md px-2 py-1 rounded text-xs font-bold text-white">
+              ${p.bhk} BHK • ${p.locality}
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+            <div>
+              <div class="flex items-baseline justify-between mb-1">
+                <span class="text-2xl font-black text-amber-400">${p.priceDisplay}</span>
+                <span class="text-xs text-slate-400 font-semibold">${p.carpetArea}</span>
+              </div>
+              <h3 class="text-base font-extrabold text-white leading-tight group-hover:text-emerald-400 transition-colors">${p.title}</h3>
+              <p class="text-xs text-slate-400 mt-1 line-clamp-2">${p.description}</p>
+            </div>
+            <div class="pt-3 border-t border-slate-800 flex items-center justify-between">
+              <div>
+                <p class="text-[11px] font-bold text-slate-300">${p.seller}</p>
+              </div>
+              <a href="https://wa.me/${p.phone.replace(/[^0-9]/g, '')}?text=Hi,%20I%20am%20interested%20in%20${encodeURIComponent(p.title)}%20on%20PropReel" target="_blank" class="px-3.5 py-1.5 rounded-xl font-bold text-xs bg-emerald-500/20 hover:bg-emerald-500 text-emerald-400 hover:text-white border border-emerald-500/30 transition-all flex items-center gap-1">
+                WhatsApp
+              </a>
+            </div>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function filterByLocality(loc) {
+      currentLocality = loc;
+      document.getElementById("searchLocality").value = loc;
+      renderProperties();
+    }
+
+    function filterByBhk(bhk) {
+      currentBhk = bhk;
+      document.querySelectorAll(".bhk-pill").forEach(el => {
+        el.className = "bhk-pill px-4 py-1.5 rounded-lg text-xs font-bold bg-slate-800 text-slate-300 hover:bg-slate-700";
+      });
+      event.target.className = "bhk-pill px-4 py-1.5 rounded-lg text-xs font-bold bg-emerald-500 text-white";
+      renderProperties();
+    }
+
+    function applyFilters() {
+      currentLocality = document.getElementById("searchLocality").value;
+      currentBhk = document.getElementById("searchBhk").value;
+      renderProperties();
+      document.getElementById("properties").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function toggleMute() {
+      const v = document.getElementById("heroReelVideo");
+      v.muted = !v.muted;
+      document.getElementById("muteBtn").innerText = v.muted ? "🔇 Muted" : "🔊 Sound";
+    }
+
+    // Live API Health Check
+    async function checkApi() {
+      const start = Date.now();
+      try {
+        const res = await fetch('/api/health');
+        const latency = Date.now() - start;
+        if (res.ok) {
+          const data = await res.json();
+          document.getElementById("apiLatency").innerText = `${latency}ms (${data.database})`;
+          document.getElementById("apiStatusDot").className = "w-3 h-3 rounded-full bg-emerald-500";
+        } else {
+          throw new Error();
+        }
+      } catch {
+        document.getElementById("apiLatency").innerText = "ready";
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      renderProperties();
+      checkApi();
+    });
+  </script>
+</body>
+</html>
